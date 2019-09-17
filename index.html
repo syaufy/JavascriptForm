@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <title>Latihan Modul 3</title>
+  </head>
+  <body>
+    <script>
+        // Bagian JavaScript
+    function tekan()
+    {
+        var nimstr = (document.form.NIM.value);
+        var namastr = (document.form.nama.value);
+        document.form.NIM2.value = nimstr;
+        document.form.nama2.value = namastr;
+        var jurusanstr = (document.form.jurusan.value);
+        document.form.jurusan2.value = jurusanstr;
+        var jeniskelamin = (document.form.jk.value);
+        document.form.jk2.value = jeniskelamin;
+        var agamastr = (document.form.agama.value);
+        document.form.agama2.value = agamastr;
+        var komentarstr = (document.form.komentar.value);
+        document.form.komentar2.value = komentarstr;
+        var kawinstr = (document.form.kawin.value);
+        document.form.kawin2.value = kawinstr;
+        
+        if (form.kawin.checked == true)
+        {
+          document.form.kawin2.value = "Kawin";
+
+        } else {
+
+         document.form.kawin2.value = "Tidak Kawin";
+
+        }
+        // var statusstr = (document.form.status.value);
+        // document.form.status2.value = statusstr;
+    }
+    </script>
+
+    <!-- Bagian Desain -->
+    <form name="form">
+    <!-- form input -->
+    <div class="row justify-content-center">
+    <div class="col-6 formstyle">
+        <h2 class="text-center header">Input</h2>
+        <div class="form-group">
+            <label for="exampleInputEmail1">NIM</label>
+            <input type="text" class="form-control" id="exampleInputEmail1"  placeholder="Masukan NIM Disini" name="NIM">
+          </div>
+          <div class="form-group">
+                <label for="exampleInputEmail1">Nama Mahasiswa</label>
+                <input type="text" class="form-control" id="exampleInputEmail1"  placeholder="Masukan Nama Disini" name="nama">
+              </div>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Jenis Kelamin</label>
+            <select class="form-control" name="jk">
+              <option>Perempuan</option>
+              <option>Laki-Laki</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Agama</label>
+            <select class="form-control" name="agama">
+              <option>Islam</option>
+              <option>Kristen</option>
+              <option>Budha</option>
+              <option>Hindu</option>
+              <option>Konghucu</option>
+            </select>
+          </div>
+          <div class="form-check">
+            <p>Status</p>
+            <input class="form-check-input" type="radio" name="kawin" id="exampleRadios1" >
+            <label class="form-check-label" for="exampleRadios1">
+              Kawin
+            </label>
+          </div>
+          <!-- <input type="radio" name="kawin"> Kawin -->
+          <div class="form-group">
+                <label for="exampleFormControlSelect1">Jurusan Di Unikom</label>
+                <select class="form-control" name="jurusan">
+                  <option>Manajemen Informatika</option>
+                  <option>Teknik Komputer</option>
+                  <option>Teknik Industri</option>
+                  <option>Teknik Elektro</option>
+                  <option>Teknik Sipil</option>
+                  <option>Teknik Arsitektur</option>
+                  <option>Perencanaan Wil.Kota</option>
+                </select>
+              </div>
+              <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Komentar</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="komentar"></textarea>
+              </div>
+              <input class="btn btn-primary btnstyle" type="button" value="Kirim" onclick="tekan()">
+              <input class="btn btn-warning btnstyle2" type="submit" value="Ulang">
+         </div>
+    </div>
+    </div>
+    <!-- Akhir Form Input -->
+    <br>
+    <br>
+    <br>
+    <!-- Form Output -->
+    <div class="row justify-content-center">
+            <div class="col-6 formstyle2">
+                <h2 class="text-center header">Output</h2>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">NIM</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" name="NIM2">
+                  </div>
+                  <div class="form-group">
+                        <label for="exampleInputEmail1">Nama Mahasiswa</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="nama2">
+                      </div>
+                  <div class="form-group">
+                        <label for="exampleInputEmail1">Jenis Kelamin</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="jk2">
+                      </div>
+                      <div class="form-group">
+                            <label for="exampleInputEmail1">Agama</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" name="agama2">
+                          </div>
+                          <div class="form-group">
+                                <label for="exampleInputEmail1">Status</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" name="kawin2">
+                              </div>
+                              <div class="form-group">
+                                    <label for="exampleInputEmail1">Jurusan Di Unikom</label>
+                                    <input type="text" class="form-control" id="exampleInputEmail1" name="jurusan2">
+                                  </div>
+                                  <div class="form-group">
+                                        <label for="exampleFormControlTextarea1">Komentar</label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="komentar2"></textarea>
+                                      </div>
+            </div>
+            </div>
+            <!-- Akhir Form Output -->
+        </form>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
